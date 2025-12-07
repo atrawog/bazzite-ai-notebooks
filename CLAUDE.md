@@ -71,3 +71,42 @@ The notebooks are designed as templates - synthetic data is used for demonstrati
 - Notebooks include executed outputs showing results from an RTX 4080 SUPER GPU
 - GPU availability checks include fallback messages for CPU-only environments
 - Model files (e.g., `simple_nn_model.pth`) are generated during execution and excluded via `.gitignore`
+
+---
+
+## AI Attribution (Fedora Policy Compliant)
+
+Per [Fedora AI Contribution Policy](https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/), Claude **MUST** include the `Assisted-by: Claude` trailer with a **confidence statement** in all commits:
+
+```
+<commit message>
+
+Assisted-by: Claude (fully tested and validated)
+```
+
+### Confidence Statements (Required)
+
+All AI-assisted contributions **MUST** include a confidence statement indicating verification level:
+
+| Statement | When to Use | Evidence |
+|-----------|-------------|----------|
+| `fully tested and validated` | Testing + all standards met | Complete verification |
+| `analysed on a live system` | Observed live system behavior | Partial testing, live analysis |
+| `syntax check only` | Pre-commit hooks passed, no functional testing | Linting passed |
+| `theoretical suggestion` | No validation performed | AVOID - unverified code |
+
+**MANDATORY for Claude:**
+
+- **ALWAYS** include confidence statement - non-negotiable
+- Trailer goes after commit body, separated by blank line
+- Required for ALL Claude-assisted commits (code, docs, configs)
+- Only exception: trivial grammar/spelling corrections
+
+**GitHub Issues and PRs:**
+
+When creating issues or PR descriptions, include at the end:
+
+```markdown
+---
+*Assisted-by: Claude (fully tested and validated)*
+```
