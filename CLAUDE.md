@@ -16,8 +16,37 @@ These notebooks require the bazzite-ai Jupyter environment with:
 
 Start the environment:
 ```bash
-ujust jupyter start
+# First-time setup (install instance 1 on port 8888)
+ujust jupyter install 1 8888
+
+# Start/stop the environment
+ujust jupyter start 1
+ujust jupyter stop 1
 ```
+
+## Jupyter Commands
+
+All commands use the format `ujust jupyter <command>`:
+
+| Command | Purpose |
+|---------|---------|
+| `install <INSTANCE> <PORT> [GPU] [TAG]` | Install new instance |
+| `start <INSTANCE\|all>` | Start instance(s) |
+| `stop <INSTANCE\|all>` | Stop instance(s) |
+| `restart <INSTANCE\|all>` | Restart instance(s) |
+| `logs <INSTANCE> [LINES]` | View logs |
+| `list` | List all instances |
+| `status <INSTANCE>` | Detailed status |
+| `url <INSTANCE>` | Show access URL |
+| `shell <INSTANCE> [CMD]` | Container shell |
+| `token-enable/disable/show/regenerate <INSTANCE>` | Token auth |
+| `uninstall <INSTANCE\|all>` | Remove instance(s) |
+
+GPU types: `nvidia`, `amd`, `intel`, `auto` (default), `none`
+
+## Workspace Mounting
+
+Your home directory (`$HOME`) is mounted as `/workspace` inside the container. Files are owned by your user via UID mapping (`keep-id`). JupyterLab opens in `/workspace` by default, giving direct access to all your files.
 
 ## Notebooks
 
