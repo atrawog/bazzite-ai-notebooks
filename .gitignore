@@ -1,3 +1,72 @@
-.ipynb_checkpoints/
+# Development secrets
+cosign.key
+_build_*
+.env
+
+# Build cache management
+.cache-push-approved
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Claude Code settings
+.claude/settings.local.json
+.claude/.fuse_hidden*
+
+# MCP server data (chunkhound database)
+.chunkhound/
+
+# Testing utilities artifacts
+testing/*.log
+testing/*.backup
+testing/*.tmp
+
+# Build output directory (all formats)
+output/
+*.manifest.json
+
+# Individual build artifacts (if accidentally placed in root)
+*.iso
+SHA256SUMS
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Settings exception: Claude skeleton settings (needed for default user config)
+!system_files/etc/skel/.claude/settings.json
+
+# Documentation build artifacts
+docs/_build/
+docs/.jupyter_cache/
+venv/
+.venv/
 *.pyc
 __pycache__/
+
+# Jupyter/ML artifacts
+.ipynb_checkpoints/
+*.pth
+
+# Pixi environment (pixi.lock is committed for reproducibility)
+.pixi/
+*.lock.backup
+
+# Pre-commit and linter caches
+.pre-commit-cache/
+.markdownlint-cache/
+.shellcheck-cache/
+
+# Pixi migration planning files (working documents)
+.pixi-migration-*.md
+.*-pixi-example
+.pre-commit-config-pixi-example.yaml
+_build/
+ublue-os-packages
