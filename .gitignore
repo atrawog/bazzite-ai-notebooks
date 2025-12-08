@@ -70,3 +70,9 @@ __pycache__/
 .pre-commit-config-pixi-example.yaml
 _build/
 ublue-os-packages
+
+# Vector
+
+*.svec
+vectors_improved/
+steering_config/
