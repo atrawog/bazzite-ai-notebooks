@@ -10,3 +10,19 @@ __pycache__/
 # Virtual environments
 .venv/
 venv/
+
+# Training output files and model checkpoints
+ft_model/
+ft_model_trainer/
+**/ft_model/
+**/ft_model_trainer/
+unsloth_compiled_cache/
+**/unsloth_compiled_cache/
+
+# Generated output files
+simplified_output.json
+**/simplified_output.json
+
+# ChromaDB data
+chroma_db/
+**/chroma_db/
