@@ -12,12 +12,28 @@ __pycache__/
 venv/
 
 # Training output files and model checkpoints
+output/
+outputs/
+**/output/
+**/outputs/
 ft_model/
 ft_model_trainer/
 **/ft_model/
 **/ft_model_trainer/
 unsloth_compiled_cache/
 **/unsloth_compiled_cache/
+checkpoints/
+**/checkpoints/
+
+# Experiment tracking
+wandb/
+**/wandb/
+runs/
+**/runs/
+logs/
+**/logs/
+mlruns/
+**/mlruns/
 
 # Generated output files
 simplified_output.json
